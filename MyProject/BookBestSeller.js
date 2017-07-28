@@ -14,6 +14,8 @@ const API_stem='https://api.nytimes.com/svc/books/v3/lists';
 const Path='https://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20weather.forecast%20where%20woeid%20in%20(select%20woeid%20from%20geo.places(1)%20where%20text%3D%22nome%2C%20ak%22)&format=json&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys'
  //const Path='https://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20weather.forecast%20where%20woeid%3D2502265&format=json&diagnostics=true&callback='
 
+// google stock information
+// const Path='https://finance.google.com/finance/info?client=ig&q=TPE:2884'
 
 export default class BookBestSeller extends Component {
 constructor(props) {
@@ -33,6 +35,7 @@ componentDidMount() {
           isLoading: false,
           //dataSource: ds.cloneWithRows(responseJson.movies),
         dataSource: ds.cloneWithRows(responseJson.query.results.channel),
+        //dataSource: ds.cloneWithRows(responseJson),
         }, function() {
           // do something with new state
         });
@@ -82,6 +85,7 @@ render(){
           dataSource={this.state.dataSource}
           renderRow={(rowData) => <Text>{rowData.distance},{rowData.pressure},{rowData.speed},{rowData.country}</Text>}
            //renderRow={(rowData) => <Text>{rowData.title}, {rowData.releaseYear}</Text>}
+           //renderRow={(rowData) => <Text>{rowData.lt},{rowData.l_cur},{rowData.t},{rowData.id}</Text>}
         />
       </View>
 
