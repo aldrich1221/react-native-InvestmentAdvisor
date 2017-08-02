@@ -15,8 +15,7 @@ import PanResponder from './PanResponder';
 import Switch from './Switch';
 import Geolocation from './GeoLocation';
 import TabBar from './TabBar';
-
-
+import Calendar from'./Calendar'
 
 
 
@@ -39,6 +38,11 @@ class HomeScreen extends React.Component {
       <View style={styles.ChooseBox}>
           <View style={styles.ButtonBox}>
         <Text>Hello, Cool App!</Text>
+        <Button
+          onPress={() => navigate('Calendar')}
+          title="Go to Calendar"
+        />
+        
         <Button
           onPress={() => navigate('Weather')}
           title="GO to Weather"

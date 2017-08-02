@@ -9,6 +9,7 @@ var {
   Image,
   ScrollView,
   TabBarIOS,
+
 } = require('react-native');
 
 var width = Dimensions.get('window').width;
@@ -18,7 +19,7 @@ var TabBar = React.createClass({
     navigationOptions : {
     title: 'TabBar',
   },
-  
+ 
   
     getInitialState: function(){
     return {
@@ -34,7 +35,7 @@ var TabBar = React.createClass({
     return(
       <TabBarIOS style={styles.flex}>
         <TabBarIOS.Item
-          title="簡介"
+          title="帳戶資訊"
           //icon={require("image!message")}
           onPress={this.select.bind(this, 'message')}
           selected={this.state.tab === 'message'}>
@@ -82,7 +83,7 @@ var TabBar = React.createClass({
         </TabBarIOS.Item>
 
         <TabBarIOS.Item
-          title="聯絡人"
+          title="收入支出"
           //icon={require("image!phone")}
           onPress={this.select.bind(this, 'phonelist')}
           selected={this.state.tab === 'phonelist'}>

@@ -13,6 +13,7 @@ import PanResponder from './PanResponder';
 import Switch from './Switch';
 import GEOlocation from './GeoLocation';
 import TabBar from './TabBar';
+import Calendar from './Calendar';
 const Home = StackNavigator({
   Home: { screen: HomeScreen },
   Weather: { screen: WeatherScreen },
@@ -22,8 +23,8 @@ const Home = StackNavigator({
   PanResponder:{screen: PanResponder},
   Switch:{screen: Switch},
   Geolocation:{screen:GEOlocation},
-  TabBar:{screen:TabBar}
-
+  TabBar:{screen:TabBar},
+Calendar:{screen:Calendar}
 
 });
 
